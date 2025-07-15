@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  report-service:
+    build: .
+    ports:
+      - "8084:8084"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/report-service
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: root
+      SPRING_APPLICATION_NAME: report-service
+      SERVER_PORT: 8084
+      SPRING_KAFKA_BOOTSTRAP_SERVERS: kafka:9092
+    networks:
+      - backend
+
+volumes:
+  pgdata:
+
+networks:
+  backend:
+    external: true

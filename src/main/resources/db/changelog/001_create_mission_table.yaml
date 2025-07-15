@@ -1,0 +1,60 @@
+databaseChangeLog:
+  - changeSet:
+      id: 001_create_mission_table
+      author: Veselin Valev
+      changes:
+        - createTable:
+            tableName: mission
+            columns:
+              - column:
+                  name: id
+                  type: int
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: final_count
+                  type: int
+                  constraints:
+                    nullable: false
+              - column:
+                  name: original_count
+                  type: int
+                  constraints:
+                    nullable: false
+              - column:
+                  name: status
+                  type: varchar(50)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: operation_type
+                  type: varchar(50)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: user_id
+                  type: int
+                  constraints:
+                    nullable: false
+              - column:
+                  name: product_id
+                  type: int
+                  constraints:
+                    nullable: false
+              - column:
+                  name: warehouse_id
+                  type: int
+                  constraints:
+                    nullable: false
+              - column:
+                  name: created
+                  type: timestamp(6)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: updated
+                  type: timestamp(6)
+                  constraints:
+                    nullable: false
