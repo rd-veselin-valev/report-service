@@ -19,7 +19,7 @@ import lombok.experimental.SuperBuilder;
 @SuperBuilder
 public class Mission extends BaseEntity {
     @Id
-    protected int id;
+    private int id;
 
     private int finalCount;
 

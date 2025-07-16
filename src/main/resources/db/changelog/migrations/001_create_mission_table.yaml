@@ -24,11 +24,6 @@ databaseChangeLog:
                   constraints:
                     nullable: false
               - column:
-                  name: status
-                  type: varchar(50)
-                  constraints:
-                    nullable: false
-              - column:
                   name: operation_type
                   type: varchar(50)
                   constraints:

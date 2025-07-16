@@ -1,7 +1,5 @@
 package com.example.report_service.config.kafka;
 
-import com.example.report_service.util.kafka.KafkaTopics;
-import org.apache.kafka.clients.admin.NewTopic;
 import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.common.serialization.StringDeserializer;
 import org.springframework.beans.factory.annotation.Value;
@@ -35,10 +33,5 @@ public class KafkaConfig {
                 new ConcurrentKafkaListenerContainerFactory<>();
         factory.setConsumerFactory(consumerFactory());
         return factory;
-    }
-
-    @Bean
-    public NewTopic inventoryMissionTopic() {
-        return new NewTopic(KafkaTopics.INVENTORY_MISSION_TOPIC, 1, (short) 1);
     }
 }

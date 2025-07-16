@@ -5,7 +5,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.Set;
+import java.util.List;
 
 @Data
 @Builder
@@ -14,5 +14,7 @@ import java.util.Set;
 public class UserMissionsDto {
     private int userId;
 
-    private Set<Integer> userMissionIds;
+    private int missionCount;
+
+    private List<Integer> userMissionIds;
 }

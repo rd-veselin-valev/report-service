@@ -25,7 +25,7 @@ public class MissionConsumer {
     private final MissionMapper missionMapper;
     private final ObjectMapper objectMapper;
 
-    @KafkaListener(topics = KafkaTopics.INVENTORY_MISSION_TOPIC, groupId = "${kafka.consumer.product.group-id}")
+    @KafkaListener(topics = KafkaTopics.INVENTORY_MISSION_TOPIC, groupId = "${kafka.consumer.inventory.group-id}")
     public void listen(ConsumerRecord<String, String> record) {
         log.info(InfoMessages.CONSUMING_MESSAGE, record.key(), record.value());
 
